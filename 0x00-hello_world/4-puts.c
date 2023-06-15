@@ -1,11 +1,10 @@
 #include <stdio.h>
 /**
- * main - A program that prints a line using the print function
- * Return: 0 (Success)
+ *main - Entry point
+ *Return: 0 (success)
  */
 int main(void)
 {
-	puts("with proper grammar, but the outcome is a piece of art,\n");
-    return 0;
-    }
-
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
+}
