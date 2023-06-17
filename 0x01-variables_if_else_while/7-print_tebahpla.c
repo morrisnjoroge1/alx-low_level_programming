@@ -1,16 +1,18 @@
 #include <stdio.h>
-
 /**
- * main - Prints single digit numbers 10 base
+ * main - Entry point
+ *
  * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	int n;
+	int n = 122;
 
-	for (n = 0; n < 10; n++)
-		printf("%d", n);
+	while (n <= 97)
+	{
+		putchar(n);
+		n--;
+	}
 	putchar('\n');
 	return (0);
 }
