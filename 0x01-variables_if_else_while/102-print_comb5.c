@@ -9,9 +9,9 @@ int main(void)
 	int n;
 	int m;
 
-	for (n = 0; n < 10; n++)
+	for (n = 0; n < 100; n++)
 	{
-		for (m = 0; m < 10; m++)
+		for (m = 0; m < 100; m++)
 		{
 			if (n <= m)
 			{
@@ -20,7 +20,7 @@ int main(void)
 				putchar(' ');
 				putchar('0' + m / 10);
 				putchar('0' + m % 10);
-				if (n != 9 || m != 9)
+				if (n != 98 || m != 99)
 				{
 					putchar(',');
 					putchar(' ');
