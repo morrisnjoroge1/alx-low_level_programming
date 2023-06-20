@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * _isalpha - shows 1 if the input is a
- * letter Another cases, shows 0
+ * print_sign - determines if the input number
+ * greater, equal or less than zero.
  *
- * @c: The character in ASCII code
+ * @n: The input number as an integer
  *
- * Return: 1 is greater than zero. 0 is zero'
+ * Return: 1 is greater than zero. 0 is zero,
  * -1 is less than zero
  */
 int print_sign(int n)
