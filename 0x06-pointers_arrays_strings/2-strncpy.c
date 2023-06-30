@@ -1,7 +1,7 @@
 #include "main.h"
 #include <string.h>
 /**
- * strncpy - function that copies a string
+ * _strncpy - function that copies a string
  * @dest: string
  * @src: string
  * @n:variable
@@ -13,11 +13,11 @@ char *_strncpy(char *dest, char *src, int n)
 
 	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
-		dest[i] = '\0';
+		dest[i] = src[i];
 	}
 	for (; i < n; i++)
 	{
 		dest[i] = '\0';
 	}
-	return dest;
+	return (dest);
 }
