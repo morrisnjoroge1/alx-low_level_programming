@@ -1,9 +1,9 @@
 #include "main.h"
 /**
  * char *_memset - function that fills memory with a constant byte
- * s: string array
+ * s: pointer array
  * @b: string
- * @n variable
+ * @n: variable
  * Return: s
  */
 char *_memset(char *s, char b, unsigned int n)
