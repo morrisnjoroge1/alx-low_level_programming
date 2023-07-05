@@ -1,6 +1,6 @@
 #include "main.h"
 /*
- * _puts_recursion - pointer of string
+ * _puts_recursion - pointer of string, check main.h
  * @s: pointer of arrays
  *
  */
