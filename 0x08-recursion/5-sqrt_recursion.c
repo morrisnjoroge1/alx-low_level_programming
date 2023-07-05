@@ -29,8 +29,8 @@ int sqrt_helper(int n, int start, int end)
 
 if (start > end)
 return (-1);
-mid = (start + end) / 2;
-square = mid * mid;
+mid = (start + (end - start) / 2);
+square = mid *mid;
 if (square == n)
 return (mid);
 if (square > n)
