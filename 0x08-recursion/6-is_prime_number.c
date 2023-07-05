@@ -25,5 +25,7 @@ int is_prime_helper(int n, int divisor)
 		return (1);/*if it is a prime number*/
 	if (n % divisor == 0)
 		return (0); /*if divisible by divisor*/
-	return (is_prime_helper(n, divisor + 1));
+	if (divisor == 2)
+		return is_prime_helper(n, divisor + 1); /*for even number*/
+	return (is_prime_helper(n, divisor + 1));/*odd number only*/
 }
