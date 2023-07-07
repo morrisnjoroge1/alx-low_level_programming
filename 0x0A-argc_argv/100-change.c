@@ -29,7 +29,7 @@ while (cents >= 25)
 coins++;
 cents -= 25;
 }
-while (cents <= 10)
+while (cents >= 10)
 {
 coins++;
 cents -= 10;
