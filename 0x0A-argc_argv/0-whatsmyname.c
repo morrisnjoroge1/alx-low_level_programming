@@ -7,10 +7,8 @@
  * @argv: string
  * Return: 0
  */
-int main(int agrc, char *arg[])
+int main(int agrc, char *argv[])
 {
-	int argc;
-
-	printf("%d\n", argc - 1);
+	printf("%s\n", argv[0]);
 	return (0);
 }
