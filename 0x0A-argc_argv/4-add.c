@@ -1,7 +1,29 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <ctype.h>
-/*
+#include <string.h>
+
+/**
+ * isNum - check if string array is num
+ * @num: string to check
+ * Return: 0 if it's a number
+ *         1 if it's not a number
+*/
+
+int isNum(char num[])
+{
+	int i, l = strlen(num);
+
+	for (i = 0; i < l; i++)
+	{
+		if (!isdigit(num[i]))
+			return (1);
+	}
+	return (0);
+}
+
+
+/**
  * main - a program that adds positive numbers
  *
  * @argc: holds the number of arguments passed
@@ -9,53 +31,31 @@
  *
  * Return: Always 0 (Success)
 */
-int add_positive_numbers(int argc, char *argv[]);
 
 int main(int argc, char *argv[])
 {
+	int i, sum;
+
 	if (argc == 1)
 	{
 		printf("0\n");
-		return (1);
-	}
-	int sum_result = add_positive_numbers(argc, argv);
-
-	if (sum_result == -1)
-	{
-		printf("Error\n");
-		return (1);
 	}
 	else
 	{
-		printf("%d\n", sum_result);
-		return (0);
-	}
-}
-/*
- * add_positive_numbers - check if string is number
- *
- * @argc: input
- * @argv: string
- *
- * Return: 1 if not number 0 if not
- */
-int add_positive_numbers(int argc, char *argv[])
-{
-	int result = 0;
-
-	for (int i = 1; i < argc; i++)
-	{
-		int j = 0;
-
-		while (argv[i][j] != '\0')
+		sum = 0;
+		for (i = 1; i < argc; i++)
 		{
-			if (!isdigit(argv[i][j]))
+			if (isNum(argv[i]) == 0)
 			{
-				return (-1);
+				sum += atoi(argv[i]);
 			}
-			j++;
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		result += atoi(argv[i]);
+		printf("%d\n", sum);
 	}
-	return (result);
+	return (0);
 }
