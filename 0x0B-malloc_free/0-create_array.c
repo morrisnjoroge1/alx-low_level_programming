@@ -23,5 +23,5 @@ char *create_array(unsigned int size, char c)
 		return (NULL); /*allocation of memory failed*/
 	for (i = 0; i < size; i++)
 		ar[i] = c;
-	return (0);
+	return (ar);
 }
