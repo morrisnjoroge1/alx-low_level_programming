@@ -11,7 +11,7 @@
 
 size_t print_list(const list_t *h)
 {
-	int node_count = 0;
+	int count = 0;
 
 	/* transverse through array of linked items*/
 	while (h != NULL)
@@ -19,16 +19,16 @@ size_t print_list(const list_t *h)
 		/*if pointer is null print nill/ [0]*/
 		if (h->str == NULL)
 		{
-			printf("[%d] (nil)\n", node_count);
+			printf("[0] (nil)\n");
 		}
 		else /*print the str*/
 		{
-			printf("[%d] %s\n", node_count, h->str);
+			printf("[%d] %s\n", h->len, h->str);
 		}
 
 		/*to next node*/
 		h = h->next;
-		node_count++;
+		count++;
 	}
-	return (node_count);
+	return (count);
 }
