@@ -34,7 +34,7 @@ list_t *add_node(list_t **head, const char *str)
 
 	if (str == NULL)
 	{
-		return NULL;/*invalid input*/
+		return (NULL);/*invalid input*/
 	}
 	add->str = strdup(str);
 
