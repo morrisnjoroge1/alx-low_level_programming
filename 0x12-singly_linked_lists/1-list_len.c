@@ -8,16 +8,14 @@
  * @h: name of the list
  * Return: the number of nodes.
  */
-
-size_t print_list(const list_t *h)
+size_t list_len(const list_t *h)
 {
 	int count = 0;
 
-	/*transverse through the linked list*/
-	while (h != NULL)
+	while (h)
 	{
-		h = h->next;
 		count++;
+		h = h->next;
 	}
 	return (count);
 }
