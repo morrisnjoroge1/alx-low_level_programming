@@ -2,10 +2,10 @@
 #define LIST_H
 
 /**
- * struct list_s - singly linked list
+ * struct list_s - linked list
  * @str: string - (malloc'ed string)
  * @len: length of the string
- * @next: points to the next node
+ * @next: pointing to the next node
  *
  * Description: singly linked list node structure
  */

@@ -4,9 +4,9 @@
 
 /**
  * _strlen - length of a string
- * @str: string to the length of
+ * @str: ponter string
  *
- * Return: length of string
+ * Return: string length
  */
 unsigned int _strlen(char *str)
 {
@@ -19,7 +19,7 @@ unsigned int _strlen(char *str)
 
 /**
  * add_node_end -  new node to the end of linked list
- * @head: double pointer to a linked list
+ * @head: function  pointer to a linked list
  * @str: string to add to the new node
  *
  * Return: pointer to the new node
