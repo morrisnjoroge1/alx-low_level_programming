@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * _strlen - function that returns the length of a string.
+ * _strlen - returns the length of a string.
  * @s : s is a character
  * Return: value is i
  */
@@ -20,10 +20,10 @@ int _strlen(const char *s)
 }
 
 /**
- * add_node - add a new node at beginning of a list_t list.
- * @head: head of a list_t list.
- * @str: value to insert into element.
- * Return: the number of nodes.
+ * add_node - add new node at beginning of a list_t.
+ * @head: head of a list_t.
+ * @str: pointer to insert into element.
+ * Return: number of nodes.
  */
 
 list_t *add_node(list_t **head, const char *str)

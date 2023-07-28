@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 /*
- * before_main - apply constructor attribute to execute main
+ * before_main - constructor attribute to apply before to execute main
  *
  */
 void before_main(void) __attribute__((constructor));
 
 /*
- * before_main - implementation of before_main
+ * before_main - implementation of function before_main
  */
 
 void before_main(void)
