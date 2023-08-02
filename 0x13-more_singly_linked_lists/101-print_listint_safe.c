@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * free_listp(list) - function that frees a list
@@ -32,7 +33,7 @@ void free_listp(listp_t **head)
 
 size_t print_listint_safe(const listint_t *head)
 {
-	listint_t *ptr = NULL, *new_node = *head, *count_node;
+	listint_t *ptr = NULL, *new_node, *count_node;
 	size_t node = 0;
 
 	while (head != NULL)
@@ -40,26 +41,26 @@ size_t print_listint_safe(const listint_t *head)
 		new_node = malloc(sizeof(listint_t));
 		if (new_node == NULL)
 			exit(98);
-		new_node->p = (*head);
+		new_node->next = *head;
 		new_node->next = ptr;
 		ptr = new_node;
 		count_node = ptr;
 
-		while (count_node->next ! NULL)
+		while (count_node->next != NULL)
 		{
 			count_node = count_node->next;
 
-			if (head == count_node->p)
+			if (head == count_node->next)
 			{
-				printf("->[%p]%d\n",(*head), head->n);
+				printf("->[%p]%d\n",head, head->n);
 				free_listp(&ptr);
 				return (node);
 			}
 		}
-		print("[%p]%d\n", (*head), head->n);
+		printf("[%p]%d\n", head, head->n);
 		head = head->next;
-		count++;
+		count_node++;
 	}
-	free_listp(&ptr);
-	return (count);
+	free_listint(&ptr);
+	return (count_node);
 }
