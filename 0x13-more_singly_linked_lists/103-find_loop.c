@@ -8,7 +8,8 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *array, *node;	
+	listint_t *array, *node;
+
 	array = node = head;
 
 	if (!head)
