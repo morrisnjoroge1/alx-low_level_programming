@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * get_endianness - function that checks the endianness
+ * get_endianness - checks the endianness
  *
- * Returns: 0 if big endian, 1 if little endian
+ * Return: 0 if big endian, 1 if little endian
  */
 
 int get_endianness(void)
